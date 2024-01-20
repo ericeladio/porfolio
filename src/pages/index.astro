@@ -1,0 +1,89 @@
+---
+import '../styles/normalize.css'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	
+	<body class="back-setting">
+		<section class="intro">
+			<div class="intro-person">
+				<h1 class="name">Eric Chavarria.</h1>
+			</div>
+			<div class="intro-nav">
+				<header>
+					<nav class="nav">
+						<a>Experience</a>
+						<a>Projects</a>
+						<a>About me</a>
+						<a>Contact</a>
+					</nav>
+				</header>
+				<div class="intro-text">
+					<h3 class="experience">Developer, based in Mexico. </h3>
+					<span >+3 years of experience, lover of good practices and clean code.</span>
+				</div>
+			</div>
+		</section>
+		
+	</body>
+</html>
+<style>
+
+	.back-setting {
+		font-family:  Helvetica, sans-serif;
+		height: 100%;
+		background-image: linear-gradient(to left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.intro{
+		display: flex;
+		margin-top: 50px;
+	}
+	.intro-person{
+		flex:6;
+		background-image: url('../../public/EricChavarria.png');
+		background-repeat: no-repeat;
+		background-position: right;
+		height:580px;
+		color: azure;
+		font-size: 80px;
+	}
+	.name{
+		width: 200px;
+		margin-top: 150px;
+		font-size: 75px;
+	}
+	.name:after{
+  		content: "";
+  		display: block;
+  		width: 55px;
+  		height: 7px;
+		margin-left:5px;
+		background-color: #051937;
+	}
+	.intro-nav{
+		flex:4;
+		font-size: 20px;
+		color: azure;
+	}
+	.intro-text{
+		margin-top: 180px;
+		font-size: 30px;
+	}
+	.experience{
+		margin-bottom: 20px;
+	}
+	.nav{
+		display: flex;
+	    justify-content: space-between;
+	}
+
+</style>
