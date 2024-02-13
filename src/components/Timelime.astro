@@ -1,40 +1,27 @@
 ---
-
+const { lang } = Astro.props;
+const test = [1, 2, 3];
 ---
 
 <section class="timeline-container">
 	<header class="title">Work experience</header>
 	<div class="timelime">
-		<div class="checkpoint">
-			<div>
-				<header class="title-timeline">Frontend Developer</header>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Perferendis possimus non dolor molestias ipsam in nostrum
-					voluptate dolore inventore ut?
-				</p>
-			</div>
-		</div>
-		<div class="checkpoint">
-			<div>
-				<header>Frontend Developer</header>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Perferendis possimus non dolor molestias ipsam in nostrum
-					voluptate dolore inventore ut?
-				</p>
-			</div>
-		</div>
-		<div class="checkpoint">
-			<div>
-				<header>Frontend Developer</header>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Perferendis possimus non dolor molestias ipsam in nostrum
-					voluptate dolore inventore ut?
-				</p>
-			</div>
-		</div>
+		{
+			test.map(() => (
+				<div class="checkpoint">
+					<div>
+						<header class="title-timeline">
+							Frontend Developer
+						</header>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Perferendis possimus non dolor molestias ipsam
+							in nostrum voluptate dolore inventore ut?
+						</p>
+					</div>
+				</div>
+			))
+		}
 	</div>
 </section>
 <style>
