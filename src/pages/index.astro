@@ -14,11 +14,9 @@ import Timelime from '../components/Timelime.astro'
 	
 	<body class="back-setting">
 		<section class="intro">
-			<div class="intro-person">
-				<h1 class="name">Eric Chavarria.</h1>
-			</div>
 			<div class="intro-nav">
-				<header>
+				<div class="size"></div>
+				<header class="size">
 					<nav class="nav">
 						<a>Experience</a>
 						<a>Projects</a>
@@ -26,6 +24,11 @@ import Timelime from '../components/Timelime.astro'
 						<a>Contact</a>
 					</nav>
 				</header>
+			</div>
+			<div class="intro-container">
+				<div class="intro-person">
+					<h1 class="name">Eric Chavarria.</h1>
+				</div>
 				<div class="intro-text">
 					<h3 class="experience">Developer, based in Mexico. </h3>
 					<span >+3 years of experience, lover of good practices and clean code.</span>
@@ -38,38 +41,47 @@ import Timelime from '../components/Timelime.astro'
 	</body>
 </html>
 <style>
-	body{
-		color:azure;
-	}
-
 	.back-setting {
 		font-family:  Helvetica, sans-serif;
 		height: 100%;
 		background-image: linear-gradient(to left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 		max-width: 1200px;
 		margin: 0 auto;
+		color: azure;
 	}
 	.intro{
-		display: flex;
-		margin-top: 50px;
 		height: 100vh;
-		margin-top: 80px;
-
+		margin-top: 50px;
+	}
+	.intro-nav{
+		display: flex;
+		font-size: 20px;
+	}
+	.nav{
+		display: flex;
+	    justify-content: space-between;
+	}
+	.size{
+		flex:1;
+	}
+	.intro-container{
+		display: flex;
+		height: 100%;
 	}
 	.intro-person{
-		flex:6;
+		flex:65;
 		background-image: url('../../public/EricChavarria.png');
 		background-repeat: no-repeat;
 		background-position: right;
-		height:580px;
+		height:100%;
 		font-size: 80px;
-	
 	}
 	.name{
 		width: 200px;
-		margin-top: 150px;
+		margin-top: 180px;
 		font-size: 75px;
 	}
+	
 	.name:after{
   		content: "";
   		display: block;
@@ -78,24 +90,14 @@ import Timelime from '../components/Timelime.astro'
 		margin-left:5px;
 		background-color: #051937;
 	}
-	.intro-nav{
-		flex:4;
-		font-size: 20px;
-		color: azure;
-	}
 	.intro-text{
-		margin-top: 180px;
+		margin-top: 200px;
 		font-size: 30px;
-	
+		flex: 35;
 	}
 	.experience{
-		margin-bottom: 20px;
-	}
-	.nav{
-		display: flex;
-	    justify-content: space-between;
-
+		margin-bottom: 8px;
 	}
 	
-
+	
 </style>
