@@ -1,22 +1,19 @@
 ---
-const { lang } = Astro.props;
-const test = [1, 2, 3];
+const { data } = Astro.props;
 ---
 
 <section class="timeline-container">
 	<header class="title">Work experience</header>
 	<div class="timelime">
 		{
-			test.map(() => (
+			data.map((item) => (
 				<div class="checkpoint">
 					<div>
 						<header class="title-timeline">
-							Frontend Developer
+							{item.title}
 						</header>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Perferendis possimus non dolor molestias ipsam
-							in nostrum voluptate dolore inventore ut?
+							{item.description}
 						</p>
 					</div>
 				</div>
