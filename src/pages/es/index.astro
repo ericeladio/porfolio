@@ -1,13 +1,13 @@
 ---
-import "../styles/normalize.css";
-import Timelime from "../components/Timelime.astro";
-import TranslateIcon from "../components/TranslateIcon.astro";
-import { INFO } from "../../public/content.js";
+import "../../styles/normalize.css";
+import Timelime from "../../components/Timelime.astro";
+import TranslateIcon from "../../components/TranslateIcon.astro";
+import { INFO } from "../../../public/content.js";
 
-const TX = INFO.english;
+const TX = INFO.spanish;
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -25,7 +25,7 @@ const TX = INFO.english;
 						<a>{TX.nav["experience"]}</a>
 						<a>{TX.nav["projects"]}</a>
 						<a>{TX.nav["about_me"]}</a>
-						<a>{TX.nav["contact"]}</a>
+						<a href="">{TX.nav["contact"]}</a>
 						<TranslateIcon lang={TX.nav["lang"]} />
 					</nav>
 				</header>
