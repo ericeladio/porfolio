@@ -1,5 +1,6 @@
 ---
 import '../styles/normalize.css'
+import Timelime from '../components/Timelime.astro'
 ---
 
 <html lang="en">
@@ -31,10 +32,15 @@ import '../styles/normalize.css'
 				</div>
 			</div>
 		</section>
+		<Timelime/>
+		
 		
 	</body>
 </html>
 <style>
+	body{
+		color:azure;
+	}
 
 	.back-setting {
 		font-family:  Helvetica, sans-serif;
@@ -46,6 +52,9 @@ import '../styles/normalize.css'
 	.intro{
 		display: flex;
 		margin-top: 50px;
+		height: 100vh;
+		margin-top: 80px;
+
 	}
 	.intro-person{
 		flex:6;
@@ -53,8 +62,8 @@ import '../styles/normalize.css'
 		background-repeat: no-repeat;
 		background-position: right;
 		height:580px;
-		color: azure;
 		font-size: 80px;
+	
 	}
 	.name{
 		width: 200px;
@@ -77,6 +86,7 @@ import '../styles/normalize.css'
 	.intro-text{
 		margin-top: 180px;
 		font-size: 30px;
+	
 	}
 	.experience{
 		margin-bottom: 20px;
@@ -84,6 +94,8 @@ import '../styles/normalize.css'
 	.nav{
 		display: flex;
 	    justify-content: space-between;
+
 	}
+	
 
 </style>

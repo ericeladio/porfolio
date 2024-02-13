@@ -1,0 +1,123 @@
+---
+
+---
+
+<section class="timeline-container">
+    <header class="title">Work experience</header>
+    <div class="timelime">
+        <div class="checkpoint">
+            <div>
+                <header class="title-timeline">Frontend Developer</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis possimus non dolor molestias ipsam in nostrum voluptate dolore inventore ut?</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <header>Frontend Developer</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis possimus non dolor molestias ipsam in nostrum voluptate dolore inventore ut?</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <header>Frontend Developer</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis possimus non dolor molestias ipsam in nostrum voluptate dolore inventore ut?</p>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .title{
+        color : #051937;
+        font-size:40px;
+    }
+    .title-timeline{
+        color : #051937
+    }
+    .timelime{
+		margin: 5em auto;
+		max-width: 34.15em;
+	}
+	.checkpoint{
+		max-width: 34em;
+		padding-top: 2em;
+		padding-bottom: 2em;
+		position: relative;
+	}
+	.checkpoint div{
+		border: 2px solid #888;
+		border-radius: 1em;
+		padding: 1.5em;
+	}
+	.checkpoint p {
+		line-height: 27px;
+		color: #ccc;
+	}
+	.checkpoint:nth-child(odd){
+		border-left: 3px solid #888;
+		padding-left: 3em;
+		transform: translateX(17em);
+	}
+	.checkpoint:nth-child(even){
+		border-right: 3px solid #888;
+		padding-right: 3em;
+		transform: translateX(-16.8em);
+	} 
+	.checkpoint:nth-child(even)::before,
+	.checkpoint:nth-child(odd)::before{
+		content: "";
+		background-color: #888;
+		position: absolute;
+		width: 3em;
+		height: 3px;
+		top: 50%;
+		transform: translateY(-50%);
+	} 
+	.checkpoint:nth-child(even)::before{
+		right: 0;
+	}
+	.checkpoint:nth-child(odd)::before{
+		left: 0;
+	} 
+	.checkpoint:nth-child(odd) div::before,
+	.checkpoint:nth-child(even) div::before{
+		content: " ";
+		background-color: #fff;
+		box-shadow:  0 0 0.5em #0d71fc;
+		position: absolute;
+		width: 0.8em;
+		height: 0.8em;
+		top: 50%;
+		transform: translateY(-50%);
+		border-radius: 50%;
+	}
+	.checkpoint:nth-child(odd) div::before{
+		left: -0.5em;
+	}
+	.checkpoint:nth-child(even) div::before{
+		right: -0.5em;
+	}
+	@media screen and (max-width: 1150px) {
+		.timelime {
+			width: 80vw;
+		}
+		.timelime .checkpoint{
+			width: 100%;
+			transform: none;
+			padding-left: 0;
+			padding-right: 0;
+			border: none;
+		}
+		.timelime .checkpoint::before{
+			width: 3px;
+			height: 4em;
+			top: -2em;
+			left:50%;
+			transform: translateX(-50%);
+		}
+		.timelime .checkpoint div::before{
+			top: -0.5em;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+</style>
