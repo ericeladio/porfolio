@@ -1,6 +1,7 @@
 ---
 import "../styles/normalize.css";
 import Timelime from "../components/Timelime.astro";
+import Proyects from "../components/proyects.astro";
 import TranslateIcon from "../components/TranslateIcon.astro";
 import { INFO } from "../../public/content.js";
 
@@ -40,7 +41,8 @@ const TX = INFO.english;
 				</div>
 			</div>
 		</section>
-		<Timelime  data={TX.work_experience['work']}/>
+		<Timelime  data={TX.work_experience}/>
+		<Proyects data={TX.Proyects}/>
 	</body>
 </html>
 <style>
@@ -109,4 +111,3 @@ const TX = INFO.english;
 		margin-bottom: 8px;
 	}
 </style>
-../../public/content.js

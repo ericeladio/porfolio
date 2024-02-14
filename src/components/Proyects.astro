@@ -1,0 +1,59 @@
+---
+const { data } = Astro.props;
+---
+
+<section>
+    <header>Proyectos</header>
+    {
+        data.map((item) => (
+            <div class="container">
+                <div class="image-container">
+                    <img
+                        class="image-proyect"
+                        alt="image_proyect"
+                        src="https://blog.openclassrooms.com/es/wp-content/uploads/sites/5/2017/09/AdobeStock_126016889apaisado-710x367.jpg"
+                    />
+                </div>
+                <div>
+                    <h3 class="title">{item.title}</h3>
+                    <div>
+                        <img alt="icon" />
+                        
+                    </div>
+                    <p>{item.description}</p>
+                    <div>
+                        <button class="button">preview</button>
+                    </div>
+                </div>
+            </div>
+        ))
+    }
+</section>
+<style>
+    .container {
+        display: flex;
+    }
+    .container div {
+        flex: 1;
+        margin: 30px 0;
+    }
+    .image-container{
+        display: flex;
+        justify-content: center;
+    }
+    .image-proyect {
+        width: 450px;
+        height: 250px;
+        border-radius: 15px;
+    }
+    .title{
+        font-size: 25px;
+    }
+    .button{
+        background-color: #051937;
+        color: azure;
+        border-radius: 15px;
+        padding: 8px 45px;
+        border: none;
+    }
+</style>ß

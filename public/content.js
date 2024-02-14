@@ -11,27 +11,42 @@ export const INFO = {
             based: 'Developer, based in Mexico.',
             slogan: '+ 3 years of experience, lover of good practices and clean code.',
         },
-        work_experience: {
-            work: [
-                {
-                    title: 'SEGARMEX',
-                    description: 'dfdfsdfsd',
-                },
-                {
-                    title: 'SEGARMEX',
-                    description: 'dfdfsdfsd',
-                },
-                {
-                    title: 'SEGARMEX',
-                    description: 'dfdfsdfsd',
-                },
-                {
-                    title: 'SEGARMEX',
-                    description: 'dfdfsdfsd',
-                },
-            ]
-
-        },
+        work_experience: [
+            {
+                title: 'SEGARMEX',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'SEGARMEX',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'SEGARMEX',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'SEGARMEX',
+                description: 'dfdfsdfsd',
+            },
+        ],
+        Proyects: [
+            {
+                title: 'Proyecto 1',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'Proyecto 2',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'Proyecto 3',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'Proyecto 4',
+                description: 'dfdfsdfsd',
+            },
+        ]
 
     },
     spanish: {
