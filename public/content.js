@@ -32,7 +32,7 @@ export const INFO = {
         Proyects: [
             {
                 title: 'Proyecto 1',
-                description: 'dfdfsdfsd',
+                description: 'sdnfksdnfk jsdnjfnsdjnkfjns kjdfjksdjkbfkjbsdkj',
             },
             {
                 title: 'Proyecto 2',
@@ -61,26 +61,42 @@ export const INFO = {
             based: 'Desarrollador, ubicado en Mexico.',
             slogan: 'más de 3 años de experiencia, amante de las buenas practicas y el código limpio.',
         },
-        work_experience: {
-            work: [
-                {
-                    title: 'SEGARMEX',
-                    description: 'dfdfsdfsd',
-                },
-                {
-                    title: 'SEGARMEX',
-                    description: 'dfdfsdfsd',
-                },
-                {
-                    title: 'SEGARMEX',
-                    description: 'dfdfsdfsd',
-                },
-                {
-                    title: 'SEGARMEX',
-                    description: 'dfdfsdfsd',
-                },
-            ]
-        }
+        work_experience: [
+            {
+                title: 'SEGARMEX',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'SEGARMEX',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'SEGARMEX',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'SEGARMEX',
+                description: 'dfdfsdfsd',
+            },
+        ],
+        Proyects: [
+            {
+                title: 'Proyecto 1',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'Proyecto 2',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'Proyecto 3',
+                description: 'dfdfsdfsd',
+            },
+            {
+                title: 'Proyecto 4',
+                description: 'dfdfsdfsd',
+            },
+        ]
 
     }
 }

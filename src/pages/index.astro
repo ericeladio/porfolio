@@ -1,13 +1,9 @@
 ---
 import "../styles/normalize.css";
-import Timelime from "../components/Timelime.astro";
-import Proyects from "../components/proyects.astro";
-import TranslateIcon from "../components/TranslateIcon.astro";
+import Home from "../components/Home.astro";
 import { INFO } from "../../public/content.js";
-
-const TX = INFO.english;
 ---
-
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -16,33 +12,8 @@ const TX = INFO.english;
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-
 	<body class="back-setting">
-		<section class="intro">
-			<div class="intro-nav">
-				<div class="size"></div>
-				<header class="size">
-					<nav class="nav">
-						<a>{TX.nav["experience"]}</a>
-						<a>{TX.nav["projects"]}</a>
-						<a>{TX.nav["about_me"]}</a>
-						<a>{TX.nav["contact"]}</a>
-						<TranslateIcon lang={TX.nav["lang"]} />
-					</nav>
-				</header>
-			</div>
-			<div class="intro-container">
-				<div class="intro-person">
-					<h1 class="name">Eric Chavarria.</h1>
-				</div>
-				<div class="intro-text">
-					<h3 class="experience">{TX.intro['based']}</h3>
-					<span>{TX.intro["slogan"]}</span>
-				</div>
-			</div>
-		</section>
-		<Timelime  data={TX.work_experience}/>
-		<Proyects data={TX.Proyects}/>
+		<Home TX={INFO.english} />
 	</body>
 </html>
 <style>
@@ -60,54 +31,5 @@ const TX = INFO.english;
 		max-width: 1200px;
 		margin: 0 auto;
 		color: azure;
-	}
-	.intro {
-		height: 100vh;
-		margin-top: 50px;
-	}
-	.intro-nav {
-		display: flex;
-		font-size: 20px;
-	}
-	.nav {
-		display: flex;
-		justify-content: space-between;
-	}
-	.size {
-		flex: 1;
-	}
-	.intro-container {
-		display: flex;
-		height: 100%;
-	}
-	.intro-person {
-		flex: 65;
-		background-image: url("../../public/EricChavarria.png");
-		background-repeat: no-repeat;
-		background-position: right;
-		height: 100%;
-		font-size: 80px;
-	}
-	.name {
-		width: 200px;
-		margin-top: 180px;
-		font-size: 75px;
-	}
-
-	.name:after {
-		content: "";
-		display: block;
-		width: 55px;
-		height: 7px;
-		margin-left: 5px;
-		background-color: #051937;
-	}
-	.intro-text {
-		margin-top: 200px;
-		font-size: 30px;
-		flex: 35;
-	}
-	.experience {
-		margin-bottom: 8px;
 	}
 </style>

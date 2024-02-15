@@ -76,6 +76,12 @@
   
   a {
     background-color: transparent;
+    text-decoration: none;
+    color: azure;
+  }
+  a:hover {
+    color: white;
+    cursor: pointer;
   }
   
   /**

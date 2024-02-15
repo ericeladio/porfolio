@@ -3,24 +3,23 @@ const { data } = Astro.props;
 ---
 
 <section>
-    <header>Proyectos</header>
+    <header  class="title" id="projects">Proyectos</header>
     {
         data.map((item) => (
             <div class="container">
-                <div class="image-container">
+                <div class="info-container">
                     <img
                         class="image-proyect"
                         alt="image_proyect"
                         src="https://blog.openclassrooms.com/es/wp-content/uploads/sites/5/2017/09/AdobeStock_126016889apaisado-710x367.jpg"
                     />
                 </div>
-                <div>
-                    <h3 class="title">{item.title}</h3>
+                <div class="info-container info">
+                    <h3 class="title-proyect">{item.title}</h3>
                     <div>
                         <img alt="icon" />
-                        
                     </div>
-                    <p>{item.description}</p>
+                    <p class="description">{item.description}</p>
                     <div>
                         <button class="button">preview</button>
                     </div>
@@ -32,21 +31,36 @@ const { data } = Astro.props;
 <style>
     .container {
         display: flex;
+        align-items: center;
     }
     .container div {
         flex: 1;
         margin: 30px 0;
-    }
-    .image-container{
-        display: flex;
-        justify-content: center;
     }
     .image-proyect {
         width: 450px;
         height: 250px;
         border-radius: 15px;
     }
-    .title{
+    .info-container {
+        width: 450px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info{
+        display: block;
+    }
+    .description{
+        width: 80%;
+        display: inline-block;
+    }
+    .title {
+		color: #051937;
+		font-size: 40px;
+	}
+    .title-proyect{
         font-size: 25px;
     }
     .button{
@@ -55,5 +69,15 @@ const { data } = Astro.props;
         border-radius: 15px;
         padding: 8px 45px;
         border: none;
+    }
+    @media screen and (max-width: 1000px) {
+        .container {
+            flex-direction: column;
+        }
+        .info-container{
+        }
+        .title {
+			margin-left: 40px;
+		}
     }
 </style>ß
