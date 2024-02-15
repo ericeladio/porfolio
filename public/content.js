@@ -1,6 +1,7 @@
 export const INFO = {
     english: {
         nav: {
+            home: "Home",
             experience: "Experience",
             projects: "Projects",
             about_me: "About me",
@@ -51,6 +52,7 @@ export const INFO = {
     },
     spanish: {
         nav: {
+            home: "Inicio",
             experience: "Experiencia",
             projects: "Projectos",
             about_me: "Sobre mi",
