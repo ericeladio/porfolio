@@ -1,9 +1,13 @@
 ---
-import './home.css'
 import Timelime from "./Timelime.astro";
 import Proyects from "./Proyects.astro";
 import TranslateIcon from "./TranslateIcon.astro";
 const { TX } = Astro.props;
+let leng = "";
+
+if(TX.nav["lang"] === "English"){
+     leng = "es";
+} 
 ---
 
 <div>
@@ -12,10 +16,10 @@ const { TX } = Astro.props;
             <div class="size space"></div>
             <header class="size">
                 <nav class="nav">
-                    <a>{TX.nav["experience"]}</a>
+                    <a href=`/porfolio/${leng}`>{TX.nav["home"]}</a>
+                    <a href="#experience">{TX.nav["experience"]}</a>
                     <a href="#projects">{TX.nav["projects"]}</a>
-                    <a>{TX.nav["about_me"]}</a>
-                    <a>{TX.nav["contact"]}</a>
+                    <a href="#about">{TX.nav["about_me"]}</a>
                     <TranslateIcon lang={TX.nav["lang"]} />
                 </nav>
             </header>
@@ -33,5 +37,81 @@ const { TX } = Astro.props;
     <Timelime data={TX.work_experience} />
     <Proyects data={TX.Proyects} />
 </div>
-
-
+<style>
+    .intro {
+        height: 100vh;
+        margin-top: 50px;
+    }
+    .intro-nav {
+        display: flex;
+        font-size: 20px;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    .size {
+        flex: 1;
+    }
+    .intro-container {
+        display: flex;
+        height: 100%;
+    }
+    .intro-person {
+        flex: 65;
+        background-image: url("../../public/EricChavarria.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 100%;
+        font-size: 80px;
+    }
+    .name {
+        width: 200px;
+        margin-top: 180px;
+        font-size: 75px;
+    }
+    .name:after {
+        content: "";
+        display: block;
+        width: 55px;
+        height: 7px;
+        margin-left: 5px;
+        background-color: #051937;
+    }
+    .intro-text {
+        margin-top: 200px;
+        font-size: 30px;
+        flex: 35;
+    }
+    .experience {
+        margin-bottom: 8px;
+    }
+    @media screen and (max-width: 1000px) {
+        .space {
+            display: none;
+        }
+        .nav {
+            justify-content: space-around;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .intro-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .intro-person {
+            width: 100%;
+            margin-left: 80px;
+        }
+        .intro-text {
+            margin: 0 20px 80px 40px;
+        }
+        .intro {
+            height: auto;
+            margin-top: 10px;
+        }
+        .name {
+            margin-top: 350px;
+        }
+    }
+</style>
