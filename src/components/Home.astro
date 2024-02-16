@@ -1,13 +1,10 @@
 ---
 import Timelime from "./Timelime.astro";
 import Proyects from "./Proyects.astro";
-import TranslateIcon from "./TranslateIcon.astro";
-const { TX } = Astro.props;
-let leng = "";
+import Navbar from "./Navbar.astro";
+import Hamburguer from "../components/Hamburguer.astro";
 
-if(TX.nav["lang"] === "English"){
-     leng = "es";
-} 
+const { TX } = Astro.props;
 ---
 
 <div>
@@ -15,13 +12,10 @@ if(TX.nav["lang"] === "English"){
         <div class="intro-nav">
             <div class="size space"></div>
             <header class="size">
-                <nav class="nav">
-                    <a href=`/porfolio/${leng}`>{TX.nav["home"]}</a>
-                    <a href="#experience">{TX.nav["experience"]}</a>
-                    <a href="#projects">{TX.nav["projects"]}</a>
-                    <a href="#about">{TX.nav["about_me"]}</a>
-                    <TranslateIcon lang={TX.nav["lang"]} />
-                </nav>
+                <Navbar data={TX} stylesNav="nav"/>
+                <Hamburguer>
+                    <Navbar data={TX} stylesNav="hamburgerNav" styleA="hamburger" />
+                </Hamburguer>
             </header>
         </div>
         <div class="intro-container">
@@ -45,10 +39,6 @@ if(TX.nav["lang"] === "English"){
     .intro-nav {
         display: flex;
         font-size: 20px;
-    }
-    .nav {
-        display: flex;
-        justify-content: space-between;
     }
     .size {
         flex: 1;
@@ -89,9 +79,6 @@ if(TX.nav["lang"] === "English"){
     @media screen and (max-width: 1000px) {
         .space {
             display: none;
-        }
-        .nav {
-            justify-content: space-around;
         }
     }
     @media screen and (max-width: 1200px) {
