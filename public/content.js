@@ -1,12 +1,11 @@
 export const ICONS = {
-    'react': './public/react.svg',
-    'docker': './public/docker.svg',
-    'mongo': './public/mongodb.svg',
-    'fastapi': './public/fastapi.svg',
-    'astro': './public/favicon.svg',
-    'sqlite': './public/sqlite.svg',
+    'react': '/porfolio/react.svg',
+    'docker': './docker.svg',
+    'mongo': './mongodb.svg',
+    'fastapi': './fastapi.svg',
+    'astro': './favicon.svg',
+    'sqlite': './sqlite.svg',
 }
-
 export const INFO = {
     english: {
         nav: {
@@ -48,19 +47,19 @@ export const INFO = {
         ],
         Proyects: [
             {
-                title: 'Cromoestereopsis',
+                title: 'Cromostereopsis',
                 description: 'Informational page about chromostereopsis. Chromostereopsis is a visual illusion in which the impression of depth is conveyed in two-dimensional color images.',
                 stack: [ICONS.astro],
-                imgr: './public/cromopage.png',
+                imgr: '/porfolio/cromopage.png',
                 code: 'https://github.com/ericeladio/cromoestereopsis',
                 page: '',
 
             },
             {
-                title: 'Administrador de de Tareas',
+                title: 'Task manager',
                 description: 'A small project to practice the knowledge of FastAPI and MongoDB for the backend, React for the frontend, and Docker for deployment in a container.',
                 stack: [ICONS.react, ICONS.mongo, ICONS.fastapi, ICONS.docker],
-                imgr: './public/taskpage.png',
+                imgr: '/porfolio/taskpage.png',
                 code: 'https://github.com/ericeladio/FARM_CRUD',
                 page: '',
             },
@@ -68,7 +67,7 @@ export const INFO = {
                 title: 'Ecommerce',
                 description: 'A project in the process of creation, very similar to a task manager, but instead of MongoDB, the Tortoise ORM with SQLite is being used, and the frontend is planned to be built with Astro.',
                 stack: [ICONS.fastapi, ICONS.sqlite],
-                imgr: './public/ecommercepage.png',
+                imgr: '/porfolio/ecommercepage.png',
                 code: 'https://github.com/ericeladio/ecommerce',
                 page: '',
             },
@@ -118,7 +117,7 @@ export const INFO = {
                 title: 'Cromoestereopsis',
                 description: 'Página informativa sobre la cromoestereopsis. Cromostereopsis es una ilusión visual por la cual la impresión de profundidad se transmite en imágenes de color bidimensionales.',
                 stack: [ICONS.astro],
-                imgr: './public/cromopage.png',
+                imgr: '/porfolio/cromopage.png',
                 code: 'https://github.com/ericeladio/cromoestereopsis',
                 page: '',
 
@@ -127,7 +126,7 @@ export const INFO = {
                 title: 'Administrador de de Tareas',
                 description: 'pequeño proyecto para poner en prácticas los conocimientos de fastapi y mongo para el backend , react para el frontend y docker para poder desplegarlo en un contenedor.',
                 stack: [ICONS.react, ICONS.mongo, ICONS.fastapi, ICONS.docker],
-                imgr: './public/taskpage.png',
+                imgr: '/porfolio/taskpage.png',
                 code: 'https://github.com/ericeladio/FARM_CRUD',
                 page: '',
             },
@@ -135,7 +134,7 @@ export const INFO = {
                 title: 'Ecommerce',
                 description: 'Proyecto en proceso de creación muy similar al de administrador de tareas pero en lugar de mongo se utilizó el ORM  tortoise con sqlite y el frontend está planeado ser construido con astro.',
                 stack: [ICONS.fastapi, ICONS.sqlite],
-                imgr: './public/ecommercepage.png',
+                imgr: '/porfolio/ecommercepage.png',
                 code: 'https://github.com/ericeladio/ecommerce',
                 page: '',
             },
