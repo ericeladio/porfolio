@@ -1,3 +1,12 @@
+export const ICONS = {
+    'react': 'public/react.svg',
+    'docker': 'public/docker.svg',
+    'mongo': 'public/mongodb.svg',
+    'fastapi': 'public/fastapi.svg',
+    'astro': 'public/favicon.svg',
+    'sqlite': 'public/sqlite.svg',
+}
+
 export const INFO = {
     english: {
         nav: {
@@ -8,7 +17,7 @@ export const INFO = {
             contact: "Contact",
             lang: "Español",
         },
-        direction:{
+        direction: {
             home: '/porfolio',
         },
         intro: {
@@ -18,37 +27,50 @@ export const INFO = {
         work_experience: [
             {
                 title: 'SEGARMEX',
-                description: 'dfdfsdfsd',
+                date: 'February 2023 - October 2023',
+                description: 'In charge of the data and analytics area, using Python, a data workflow was developed along with an application that achieved process automation, reducing task execution time by 70%.',
             },
             {
-                title: 'SEGARMEX',
-                description: 'dfdfsdfsd',
+                title: 'Lisa insurtech',
+                date: 'June 2022 - December  2022',
+                description: "In charge of training AI for the analysis of documents related to the finance world within the insurance sector, implementing the 'Don't Repeat Yourself' (DRY) model using Regex and Python to create generic pipelines",
             },
             {
-                title: 'SEGARMEX',
-                description: 'dfdfsdfsd',
+                title: 'Graviti',
+                date: 'February 2022 - June 2022',
+                description: 'In charge of providing support for client and supplier data using Django and PostgreSQL, addressing issues and bug fixes, and structuring the marketplace using Next.js.',
             },
             {
-                title: 'SEGARMEX',
-                description: 'dfdfsdfsd',
+                title: 'Kondosoft',
+                date: 'December 2020 - January 2023',
+                description: 'Creation and maintenance of websites using Next.js and hybrid mobile applications using React Native',
             },
         ],
         Proyects: [
             {
-                title: 'Proyecto 1',
-                description: 'sdnfksdnfk jsdnjfnsdjnkfjns kjdfjksdjkbfkjbsdkj',
+                title: 'Cromoestereopsis',
+                description: 'Informational page about chromostereopsis. Chromostereopsis is a visual illusion in which the impression of depth is conveyed in two-dimensional color images.',
+                stack: [ICONS.astro],
+                imgr: '',
+                code: 'https://github.com/ericeladio/cromoestereopsis',
+                page: '',
+
             },
             {
-                title: 'Proyecto 2',
-                description: 'dfdfsdfsd',
+                title: 'Administrador de de Tareas',
+                description: 'A small project to practice the knowledge of FastAPI and MongoDB for the backend, React for the frontend, and Docker for deployment in a container.',
+                stack: [ICONS.react, ICONS.mongo, ICONS.fastapi, ICONS.docker],
+                imgr: '',
+                code: 'https://github.com/ericeladio/FARM_CRUD',
+                page: '',
             },
             {
-                title: 'Proyecto 3',
-                description: 'dfdfsdfsd',
-            },
-            {
-                title: 'Proyecto 4',
-                description: 'dfdfsdfsd',
+                title: 'Ecommerce',
+                description: 'A project in the process of creation, very similar to a task manager, but instead of MongoDB, the Tortoise ORM with SQLite is being used, and the frontend is planned to be built with Astro.',
+                stack: [ICONS.fastapi, ICONS.sqlite],
+                imgr: '',
+                code: 'https://github.com/ericeladio/ecommerce',
+                page: '',
             },
         ]
 
@@ -62,7 +84,7 @@ export const INFO = {
             contact: "Contacto",
             lang: "English",
         },
-        direction:{
+        direction: {
             home: '/porfolio/es',
         },
         intro: {
@@ -72,39 +94,54 @@ export const INFO = {
         work_experience: [
             {
                 title: 'SEGARMEX',
-                description: 'dfdfsdfsd',
+                date: 'Febrero 2023 - Octubre  2023',
+                description: 'Encargado del área de  datos y analitica, utilizando Python se desarrolló un flujo de datos que de trabajo y una aplicación que logró la automatización de  procesos reduciendo el tiempo de ejecución de las tareas en un 70%.',
             },
             {
-                title: 'SEGARMEX',
-                description: 'dfdfsdfsd',
+                title: 'Lisa insurtech',
+                date: 'Junio 2022 - Diciembre  2022',
+                description: "Encargado del entrenamiento de la IA  para el análisis de documentos relacionados al mundo de las finanzas por el sector de los seguros, implementando el modelo  don't repeat yourself (DRY) por medio de Regex y Python creando pipeline genéricos.",
             },
             {
-                title: 'SEGARMEX',
-                description: 'dfdfsdfsd',
+                title: 'Graviti',
+                date: 'Febrero 2022 - Junio  2022',
+                description: 'Encargado de dar soporte a los datos de los clientes y Proveedores por medio de Django y postgresql , arreglar issues y correcciones de bugs, y maquetar el marketplace usando nextjs.',
             },
             {
-                title: 'SEGARMEX',
-                description: 'dfdfsdfsd',
+                title: 'Kondosoft',
+                date: 'Diciembre 2020 - Enenero 2023',
+                description: 'creación y mantenimiento de páginas web usando NextJS y aplicaciones móviles de manera híbrida usando react native.',
             },
         ],
         Proyects: [
             {
-                title: 'Proyecto 1',
-                description: 'dfdfsdfsd',
+                title: 'Cromoestereopsis',
+                description: 'Página informativa sobre la cromoestereopsis. Cromostereopsis es una ilusión visual por la cual la impresión de profundidad se transmite en imágenes de color bidimensionales.',
+                stack: [ICONS.astro],
+                imgr: '',
+                code: 'https://github.com/ericeladio/cromoestereopsis',
+                page: '',
+
             },
             {
-                title: 'Proyecto 2',
-                description: 'dfdfsdfsd',
+                title: 'Administrador de de Tareas',
+                description: 'pequeño proyecto para poner en prácticas los conocimientos de fastapi y mongo para el backend , react para el frontend y docker para poder desplegarlo en un contenedor.',
+                stack: [ICONS.react, ICONS.mongo, ICONS.fastapi, ICONS.docker],
+                imgr: '',
+                code: 'https://github.com/ericeladio/FARM_CRUD',
+                page: '',
             },
             {
-                title: 'Proyecto 3',
-                description: 'dfdfsdfsd',
-            },
-            {
-                title: 'Proyecto 4',
-                description: 'dfdfsdfsd',
+                title: 'Ecommerce',
+                description: 'Proyecto en proceso de creación muy similar al de administrador de tareas pero en lugar de mongo se utilizó el ORM  tortoise con sqlite y el frontend está planeado ser construido con astro.',
+                stack: [ICONS.fastapi, ICONS.sqlite],
+                imgr: '',
+                code: 'https://github.com/ericeladio/ecommerce',
+                page: '',
             },
         ]
 
     }
 }
+
+

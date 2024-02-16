@@ -16,7 +16,7 @@ const { data, stylesNav, styleA } = Astro.props;
         display: flex;
         justify-content: space-between;
     }
-    .hamburgerNav{
+    .hamburgerNav {
         display: none;
     }
 
@@ -36,19 +36,17 @@ const { data, stylesNav, styleA } = Astro.props;
         border-bottom: 1px solid white;
     }
 
-
     @media screen and (max-width: 1000px) {
         .nav {
             justify-content: space-around;
         }
     }
     @media screen and (max-width: 730px) {
-        .nav{
+        .nav {
             display: none;
-        } 
-        .hamburgerNav{
-        display: block;
+        }
+        .hamburgerNav {
+            display: block;
+        }
     }
-    }
-    
 </style>

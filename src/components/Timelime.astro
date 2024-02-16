@@ -12,6 +12,7 @@ const { data } = Astro.props;
 						<header class="title-timeline">
 							{item.title}
 						</header>
+						<span class="date">{item.date}</span>
 						<p>
 							{item.description}
 						</p>
@@ -28,6 +29,8 @@ const { data } = Astro.props;
 	}
 	.title-timeline {
 		color: #051937;
+		margin-bottom: 10px;
+		font-weight: bold;
 	}
 	.timelime {
 		margin: 5em auto;
@@ -91,6 +94,9 @@ const { data } = Astro.props;
 	}
 	.checkpoint:nth-child(even) div::before {
 		right: -0.5em;
+	}
+	.date{
+		color : #051937;
 	}
 	@media screen and (max-width: 1150px) {
 		.timelime {
