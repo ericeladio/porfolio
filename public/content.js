@@ -8,6 +8,9 @@ export const INFO = {
             contact: "Contact",
             lang: "Español",
         },
+        direction:{
+            home: '/porfolio',
+        },
         intro: {
             based: 'Developer, based in Mexico.',
             slogan: '+ 3 years of experience, lover of good practices and clean code.',
@@ -58,6 +61,9 @@ export const INFO = {
             about_me: "Sobre mi",
             contact: "Contacto",
             lang: "English",
+        },
+        direction:{
+            home: '/porfolio/es',
         },
         intro: {
             based: 'Desarrollador, ubicado en Mexico.',

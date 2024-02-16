@@ -1,0 +1,95 @@
+---
+
+---
+
+<ul class="navbar" id="navbar">
+    <slot/>
+    <!-- <li><a href="#">Home</a></li>
+    <li><a href="#">Profile</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contacts</a></li> -->
+    <a class="close" href="#">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"></path>
+        </svg>
+    </a>
+</ul>
+<a class="hamburger" href="#navbar">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill-opacity="0.5"
+        class="w-6 h-6 icon-burguer"
+    >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+    </svg>
+</a>
+
+<style>
+    .icon-burguer {
+        color:black;
+    }
+    .hamburger,
+    .close {
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .close {
+        background: black;
+    }
+
+
+    .navbar {
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        list-style: none;
+        background: black;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.2s ease;
+        margin-top: 0;
+    }
+
+    .navbar:target {
+        transform: translateY(0);
+    }
+    @media screen and (max-width: 730px) {
+       
+        .hamburger{
+            display: block;
+        }
+    }
+    
+</style>
