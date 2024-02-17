@@ -46,7 +46,10 @@ const { data, stylesNav, styleA } = Astro.props;
             display: none;
         }
         .hamburgerNav {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            height: 30%;
+            justify-content: space-between;
         }
     }
 </style>
