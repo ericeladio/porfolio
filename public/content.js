@@ -1,10 +1,10 @@
 export const ICONS = {
     'react': '/porfolio/react.svg',
-    'docker': './docker.svg',
-    'mongo': './mongodb.svg',
-    'fastapi': './fastapi.svg',
-    'astro': './favicon.svg',
-    'sqlite': './sqlite.svg',
+    'docker': '/porfolio/docker.svg',
+    'mongo': '/porfolio/mongodb.svg',
+    'fastapi': '/porfolio/fastapi.svg',
+    'astro': '/porfolio/favicon.svg',
+    'sqlite': '/porfolio/sqlite.svg',
 }
 export const INFO = {
     english: {
