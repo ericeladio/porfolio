@@ -5,6 +5,8 @@ export const ICONS = {
     'fastapi': '/porfolio/fastapi.svg',
     'astro': '/porfolio/favicon.svg',
     'sqlite': '/porfolio/sqlite.svg',
+    'js': '/porfolio/js.svg',
+    'svelte': '/porfolio/Svelte.svg',
 }
 export const INFO = {
     english: {
@@ -49,7 +51,7 @@ export const INFO = {
             {
                 title: 'Cromostereopsis',
                 description: 'Informational page about chromostereopsis. Chromostereopsis is a visual illusion in which the impression of depth is conveyed in two-dimensional color images.',
-                stack: [ICONS.astro],
+                stack: [ICONS.astro, ICONS.js],
                 imgr: '/porfolio/cromopage.jpeg',
                 code: 'https://github.com/ericeladio/cromoestereopsis',
                 page: '',
@@ -71,6 +73,15 @@ export const INFO = {
                 code: 'https://github.com/ericeladio/ecommerce',
                 page: '',
             },
+            {
+                title: 'Ecommerce Fron-Tend',
+                description: 'A project in the process of creation, .',
+                stack: [ICONS.astro,ICONS.svelte],
+                imgr: '/porfolio/ecommercefront.jpeg',
+                code: 'https://github.com/ericeladio/eccomer-svelte',
+                page: '',
+            },
+
         ]
 
     },
@@ -116,7 +127,7 @@ export const INFO = {
             {
                 title: 'Cromoestereopsis',
                 description: 'Página informativa sobre la cromoestereopsis. Cromostereopsis es una ilusión visual por la cual la impresión de profundidad se transmite en imágenes de color bidimensionales.',
-                stack: [ICONS.astro],
+                stack: [ICONS.astro, ICONS.js],
                 imgr: '/porfolio/cromopage.jpeg',
                 code: 'https://github.com/ericeladio/cromoestereopsis',
                 page: '',
@@ -136,6 +147,14 @@ export const INFO = {
                 stack: [ICONS.fastapi, ICONS.sqlite],
                 imgr: '/porfolio/ecommercepage.jpeg',
                 code: 'https://github.com/ericeladio/ecommerce',
+                page: '',
+            },
+            {
+                title: 'Ecommerce Fron-Tend',
+                description: 'Proyecto en proceso de creación.',
+                stack: [ICONS.astro,ICONS.svelte],
+                imgr: '/porfolio/ecommercefront.jpeg',
+                code: 'https://github.com/ericeladio/eccomer-svelte',
                 page: '',
             },
         ]
