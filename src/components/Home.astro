@@ -1,6 +1,6 @@
 ---
 import Timelime from "./Timelime.astro";
-import Proyects from "./Proyects.astro";
+import Projects from "./Projects.astro";
 import Navbar from "./Navbar.astro";
 import Hamburguer from "../components/Hamburguer.astro";
 
@@ -12,9 +12,13 @@ const { TX } = Astro.props;
         <div class="intro-nav">
             <div class="size space"></div>
             <header class="size">
-                <Navbar data={TX} stylesNav="nav"/>
+                <Navbar data={TX} stylesNav="nav" />
                 <Hamburguer>
-                    <Navbar data={TX} stylesNav="hamburgerNav" styleA="hamburger" />
+                    <Navbar
+                        data={TX}
+                        stylesNav="hamburgerNav"
+                        styleA="hamburger"
+                    />
                 </Hamburguer>
             </header>
         </div>
@@ -28,8 +32,8 @@ const { TX } = Astro.props;
             </div>
         </div>
     </section>
-    <Timelime data={TX.work_experience} />
-    <Proyects data={TX.Proyects} />
+    <Timelime data={TX.work_experience} title={TX.titles.experience} />
+    <Projects data={TX.Projects} title={TX.titles.projects} ] />
 </div>
 <style>
     .intro {

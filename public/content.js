@@ -18,6 +18,12 @@ export const INFO = {
             contact: "Contact",
             lang: "Español",
         },
+        titles:{
+            experience: "Work Experience",
+            projects: "Projects",
+            about_me: "About me",
+            contact: "Contact",
+        },
         direction: {
             home: '/porfolio',
         },
@@ -47,7 +53,7 @@ export const INFO = {
                 description: 'Creation and maintenance of websites using Next.js and hybrid mobile applications using React Native',
             },
         ],
-        Proyects: [
+        Projects: [
             {
                 title: 'Cromostereopsis',
                 description: 'Informational page about chromostereopsis. Chromostereopsis is a visual illusion in which the impression of depth is conveyed in two-dimensional color images.',
@@ -94,6 +100,12 @@ export const INFO = {
             contact: "Contacto",
             lang: "English",
         },
+        titles:{
+            experience: "Eperiencia laboral.",
+            projects: "Proyectos.",
+            about_me: "Sobre mi.",
+            contact: "Contacto.",
+        },
         direction: {
             home: '/porfolio/es',
         },
@@ -123,7 +135,7 @@ export const INFO = {
                 description: 'creación y mantenimiento de páginas web usando NextJS y aplicaciones móviles de manera híbrida usando react native.',
             },
         ],
-        Proyects: [
+        Projects: [
             {
                 title: 'Cromoestereopsis',
                 description: 'Página informativa sobre la cromoestereopsis. Cromostereopsis es una ilusión visual por la cual la impresión de profundidad se transmite en imágenes de color bidimensionales.',
