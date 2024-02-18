@@ -18,7 +18,7 @@ export const INFO = {
             contact: "Contact",
             lang: "Español",
         },
-        titles:{
+        titles: {
             experience: "Work Experience",
             projects: "Projects",
             about_me: "About me",
@@ -55,6 +55,14 @@ export const INFO = {
         ],
         Projects: [
             {
+                title: 'Ecommerce Fron-Tend',
+                description: 'Project in the process of creation, which will have a frontend based on microservices architecture with different technologies.',
+                stack: [ICONS.astro, ICONS.svelte, ICONS.docker],
+                imgr: '/porfolio/ecommercefront.jpeg',
+                code: 'https://github.com/ericeladio/eccomer-svelte',
+                page: 'https://ecommerce-example-nnlr.onrender.com/',
+            },
+            {
                 title: 'Cromostereopsis',
                 description: 'Informational page about chromostereopsis. Chromostereopsis is a visual illusion in which the impression of depth is conveyed in two-dimensional color images.',
                 stack: [ICONS.astro, ICONS.js],
@@ -79,14 +87,6 @@ export const INFO = {
                 code: 'https://github.com/ericeladio/ecommerce',
                 page: '',
             },
-            {
-                title: 'Ecommerce Fron-Tend',
-                description: 'A project in the process of creation, .',
-                stack: [ICONS.astro,ICONS.svelte],
-                imgr: '/porfolio/ecommercefront.jpeg',
-                code: 'https://github.com/ericeladio/eccomer-svelte',
-                page: '',
-            },
 
         ]
 
@@ -100,7 +100,7 @@ export const INFO = {
             contact: "Contacto",
             lang: "English",
         },
-        titles:{
+        titles: {
             experience: "Eperiencia laboral.",
             projects: "Proyectos.",
             about_me: "Sobre mi.",
@@ -137,6 +137,14 @@ export const INFO = {
         ],
         Projects: [
             {
+                title: 'Ecommerce Fron-Tend',
+                description: 'Proyecto en proceso de creación, el cual tendrá un frontend basado en la arquitectura de  micro servicios con diferentes tecnologías.',
+                stack: [ICONS.astro, ICONS.svelte, ICONS.docker],
+                imgr: '/porfolio/ecommercefront.jpeg',
+                code: 'https://github.com/ericeladio/eccomer-svelte',
+                page: 'https://ecommerce-example-nnlr.onrender.com/',
+            },
+            {
                 title: 'Cromoestereopsis',
                 description: 'Página informativa sobre la cromoestereopsis. Cromostereopsis es una ilusión visual por la cual la impresión de profundidad se transmite en imágenes de color bidimensionales.',
                 stack: [ICONS.astro, ICONS.js],
@@ -161,14 +169,7 @@ export const INFO = {
                 code: 'https://github.com/ericeladio/ecommerce',
                 page: '',
             },
-            {
-                title: 'Ecommerce Fron-Tend',
-                description: 'Proyecto en proceso de creación.',
-                stack: [ICONS.astro,ICONS.svelte],
-                imgr: '/porfolio/ecommercefront.jpeg',
-                code: 'https://github.com/ericeladio/eccomer-svelte',
-                page: '',
-            },
+
         ]
 
     }
