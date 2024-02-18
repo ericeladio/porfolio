@@ -1,9 +1,9 @@
 ---
-const { data } = Astro.props;
+const { data, title} = Astro.props;
 ---
 
 <section>
-    <header class="title" id="projects">Proyectos</header>
+    <header class="title" id="projects">{title}</header>
     {
         data.map((item) => (
             <div class="container">
@@ -145,4 +145,4 @@ const { data } = Astro.props;
             margin-left: 20px;
         }
     }
-</style>ß
+</style>

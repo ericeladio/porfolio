@@ -1,9 +1,9 @@
 ---
-const { data } = Astro.props;
+const { data, title } = Astro.props;
 ---
 
 <section class="timeline-container">
-	<header class="title" id="experience" >Work experience</header>
+	<header class="title" id="experience" >{title}</header>
 	<div class="timelime">
 		{
 			data.map((item) => (
