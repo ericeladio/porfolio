@@ -23,6 +23,8 @@ export const INFO = {
             projects: "Projects",
             about_me: "About me",
             contact: "Contact",
+            code: "Code",
+            view: "View",
         },
         direction: {
             home: '/porfolio',
@@ -105,6 +107,8 @@ export const INFO = {
             projects: "Proyectos.",
             about_me: "Sobre mi.",
             contact: "Contacto.",
+            code: "Codigo",
+            view: "Vista",
         },
         direction: {
             home: '/porfolio/es',
