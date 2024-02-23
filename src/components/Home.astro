@@ -50,6 +50,7 @@ const { TX } = Astro.props;
     .intro-container {
         display: flex;
         height: 100%;
+        align-content: center;
     }
     .intro-person {
         flex: 65;
@@ -61,8 +62,8 @@ const { TX } = Astro.props;
     }
     .name {
         width: 200px;
-        margin-top: 180px;
         font-size: 75px;
+        margin-top: 18rem;
     }
     .name:after {
         content: "";
@@ -73,12 +74,12 @@ const { TX } = Astro.props;
         background-color: #051937;
     }
     .intro-text {
-        margin-top: 200px;
+        height: 100%;
         font-size: 30px;
         flex: 35;
     }
     .experience {
-        margin-bottom: 8px;
+        margin-top: 18rem;
     }
     @media screen and (max-width: 1000px) {
         .space {
@@ -92,10 +93,11 @@ const { TX } = Astro.props;
         }
         .intro-person {
             width: 50%;
-            padding-top: 30px;
+            padding-top: 40px;
         }
         .intro-text {
-            margin: 0 20px 80px 40px;
+            margin-left: 20px;
+            margin-bottom: 80px;
         }
         .intro {
             height: auto;
@@ -104,12 +106,22 @@ const { TX } = Astro.props;
         .name {
             margin-top: 350px;
             font-size: 55px;
+            -webkit-text-stroke: 1.5px #051937;
+        }
+        .experience {
+            margin-top: 40px;
         }
     }
     @media screen and (max-width: 730px) {
         .intro-person {
             width: 100%;
-            padding-top: 30px;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+        }
+        .name {
+            width: 70%;
+            margin-top: 485px;
         }
     }
 </style>
