@@ -1,0 +1,11 @@
+---
+const { data, titles } = Astro.props;
+---
+<section>
+    <header>{titles.about_me}</header>
+    <div>
+        <p>{data.about}</p>
+        <img src={data.img} alt="Eric Chavarria">
+    </div>
+
+</section>
