@@ -1,14 +1,14 @@
 ---
 import TranslateIcon from "./TranslateIcon.astro";
-const { data, stylesNav, styleA } = Astro.props;
+const { data} = Astro.props;
 ---
 
-<nav class={stylesNav}>
-    <a class={styleA} href={data.direction["home"]}>{data.nav["home"]}</a>
-    <a class={styleA} href="#experience">{data.nav["experience"]}</a>
-    <a class={styleA} href="#projects">{data.nav["projects"]}</a>
-    <a class={styleA} href="#about">{data.nav["about_me"]}</a>
-    <TranslateIcon lang={data.nav["lang"]} />
+<nav class='nav'>
+    <a class='element' href={data.direction["home"]}>{data.nav["home"]}</a>
+    <a class='element' href="#experience">{data.nav["experience"]}</a>
+    <a class='element' href="#projects">{data.nav["projects"]}</a>
+    <a class='element' href="#about">{data.nav["about_me"]}</a>
+    <TranslateIcon  class='element' lang={data.nav["lang"]} />
 </nav>
 
 <style>
@@ -16,23 +16,15 @@ const { data, stylesNav, styleA } = Astro.props;
         display: flex;
         justify-content: space-between;
     }
-    .hamburgerNav {
-        display: none;
+    .expanded {
+        display: unset;
+    }
+    .element {
+        width: auto;
     }
 
-    .hamburger {
-        display: block;
-        font-family: "Open Sans", sans-serif;
-        color: white;
-        font-weight: bold;
-        font-size: 1.2rem;
-        text-decoration: none;
-        border-bottom: 1px solid black;
-        padding-bottom: 0.5rem;
-    }
-
-    .hamburger :hover,
-    .hamburger :focus {
+    .expanded :hover,
+    .expanded :focus {
         border-bottom: 1px solid white;
     }
 
@@ -45,11 +37,13 @@ const { data, stylesNav, styleA } = Astro.props;
         .nav {
             display: none;
         }
-        .hamburgerNav {
+        .expanded {
             display: flex;
             flex-direction: column;
-            height: 30%;
-            justify-content: space-between;
+            margin: 0 auto;
+            height: 300px;
+            align-items: center;
+            justify-content: space-evenly;
         }
     }
 </style>
