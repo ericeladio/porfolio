@@ -1,11 +1,71 @@
 ---
 const { data, titles } = Astro.props;
 ---
-<section>
-    <header>{titles.about_me}</header>
-    <div>
-        <p>{data.about}</p>
-        <img src={data.img} alt="Eric Chavarria">
-    </div>
 
+<section>
+    <header class="title" id="about">{titles.about_me}</header>
+    <div class="about-container">
+        <di class="info-container">
+            <!-- <p>{data.about}</p> -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit numquam suscipit quidem soluta animi fugiat unde
+                inventore porro officia iste repudiandae praesentium fugit
+                sapiente nulla, veritatis nam, vel pariatur veniam?¸
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit numquam suscipit quidem soluta animi fugiat unde
+                inventore porro officia iste repudiandae praesentium fugit
+                sapiente nulla, veritatis nam, vel pariatur veniam?¸
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit numquam suscipit quidem soluta animi fugiat unde
+                inventore porro officia iste repudiandae praesentium fugit
+                sapiente nulla, veritatis nam, vel pariatur veniam?¸
+            </p>
+        </di>
+
+        <div class="img-container">
+            <img src={data.img} alt="Eric Chavarria" class="img" />
+        </div>
+    </div>
 </section>
+<style>
+    .title {
+        color: #051937;
+        font-size: 40px;
+    }
+    .about-container {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .img {
+        /* transform: rotate(0.035turn); */
+        transform: rotate(25deg);
+    }
+    .img-container {
+        background-color: #051937;
+        width: 400px;
+        left: -2%;
+        position: relative;
+        transform: rotate(-10deg);
+    }
+    .img-container::before {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 100%;
+        top: -5px;
+        left: 9%;
+        /* transform: rotate(0.015turn); */
+        transform: rotate(10deg);
+        background-image: url("../../public/circuits.png");
+    }
+    .info-container {
+        width: 700px;
+    }
+</style>
