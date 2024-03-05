@@ -33,6 +33,10 @@ export const INFO = {
             based: 'Developer, based in Mexico.',
             slogan: '+ 3 years of experience, lover of good practices and clean code.',
         },
+        about:{
+            img: '/porfolio/Eric-shake.jpeg',
+
+        },
         work_experience: [
             {
                 title: 'SEGARMEX',

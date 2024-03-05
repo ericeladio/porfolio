@@ -29,7 +29,7 @@ const { TX } = Astro.props;
     </section>
     <Timelime data={TX.work_experience} title={TX.titles.experience} />
     <Projects data={TX.Projects} titles={TX.titles} ] />
-    <!-- <About data={TX.about}  titles={TX.titles}/> -->
+    <About data={TX.about}  titles={TX.titles}/>
     <script>
         document.querySelector(".hamburger").addEventListener("click", () => {
             document.querySelector(".nav").classList.toggle("expanded");
