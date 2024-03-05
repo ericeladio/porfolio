@@ -13,14 +13,8 @@ const { TX } = Astro.props;
         <div class="intro-nav">
             <div class="size space"></div>
             <header class="size">
-                <Navbar data={TX} stylesNav="nav" />
-                <Hamburguer>
-                    <Navbar
-                        data={TX}
-                        stylesNav="hamburgerNav"
-                        styleA="hamburger"
-                    />
-                </Hamburguer>
+                <Hamburguer />
+                <Navbar data={TX} />
             </header>
         </div>
         <div class="intro-container">
@@ -36,6 +30,14 @@ const { TX } = Astro.props;
     <Timelime data={TX.work_experience} title={TX.titles.experience} />
     <Projects data={TX.Projects} titles={TX.titles} ] />
     <!-- <About data={TX.about}  titles={TX.titles}/> -->
+    <script>
+        document.querySelector(".hamburger").addEventListener("click", () => {
+            document.querySelector(".nav").classList.toggle("expanded");
+        });
+        document.querySelector(".nav").addEventListener("click", () => {
+            document.querySelector(".nav").classList.toggle("expanded");
+        });
+    </script>
 </div>
 <style>
     .intro {
