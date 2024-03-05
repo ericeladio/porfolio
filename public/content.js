@@ -121,6 +121,10 @@ export const INFO = {
             based: 'Desarrollador, ubicado en Mexico.',
             slogan: 'más de 3 años de experiencia, amante de las buenas practicas y el código limpio.',
         },
+        about:{
+            img: '/porfolio/Eric-shake.jpeg',
+
+        },
         work_experience: [
             {
                 title: 'SEGARMEX',
