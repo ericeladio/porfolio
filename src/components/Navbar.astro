@@ -3,7 +3,7 @@ import TranslateIcon from "./TranslateIcon.astro";
 const { data} = Astro.props;
 ---
 
-<nav class='nav'>
+<nav class='navar'>
     <a class='element' href={data.direction["home"]}>{data.nav["home"]}</a>
     <a class='element' href="#experience">{data.nav["experience"]}</a>
     <a class='element' href="#projects">{data.nav["projects"]}</a>
@@ -12,7 +12,7 @@ const { data} = Astro.props;
 </nav>
 
 <style>
-    .nav {
+    .navar {
         display: flex;
         justify-content: space-between;
     }
@@ -29,12 +29,12 @@ const { data} = Astro.props;
     }
 
     @media screen and (max-width: 1000px) {
-        .nav {
+        .navar {
             justify-content: space-around;
         }
     }
     @media screen and (max-width: 730px) {
-        .nav {
+        .navar {
             display: none;
         }
         .expanded {
