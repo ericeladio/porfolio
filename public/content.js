@@ -7,6 +7,7 @@ export const ICONS = {
     'sqlite': '/porfolio/sqlite.svg',
     'js': '/porfolio/js.svg',
     'svelte': '/porfolio/Svelte.svg',
+    'python': '/porfolio/python.svg',
 }
 export const INFO = {
     english: {
@@ -60,6 +61,14 @@ export const INFO = {
             },
         ],
         Projects: [
+            {
+                title: 'Inflation page by year',
+                description: 'Creation of inflation dashboard per year which can consult more than 200 countries and with a history of 30 years.',
+                stack: [ ICONS.python,ICONS.docker],
+                imgr: '/porfolio/shinyWeb.jpeg',
+                code: 'https://github.com/ericeladio/shiny_web',
+                page: 'https://shiny-web.onrender.com/',
+            },
             {
                 title: 'Ecommerce Fron-Tend',
                 description: 'Project in the process of creation, which will have a frontend based on microservices architecture with different technologies.',
@@ -148,6 +157,14 @@ export const INFO = {
             },
         ],
         Projects: [
+            {
+                title: 'Pagina Inflacion por año',
+                description: 'Creacion de dashboard de inflación por año el cual puede consultar mas de 200 paises y con un historial de 30 años.',
+                stack: [ ICONS.python,ICONS.docker],
+                imgr: '/porfolio/shinyWeb.jpeg',
+                code: 'https://github.com/ericeladio/shiny_web',
+                page: 'https://shiny-web.onrender.com/',
+            },
             {
                 title: 'Ecommerce Fron-Tend',
                 description: 'Proyecto en proceso de creación, el cual tendrá un frontend basado en la arquitectura de  micro servicios con diferentes tecnologías.',
