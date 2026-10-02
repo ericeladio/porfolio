@@ -1,0 +1,117 @@
+---
+const skills = [
+  {
+    name: 'Frontend',
+    items: ['React', 'Next.js', 'React Native', 'Astro']
+  },
+  {
+    name: 'Backend',
+    items: ['Node.js', 'Python', 'FastAPI', 'Django']
+  },
+  {
+    name: 'DevOps & AI',
+    items: ['Docker', 'CI/CD', 'Agent harness']
+  }
+];
+---
+
+<section class="skills" id="skills">
+      <div class="section-label">
+        <span class="lang-en">SKILLS</span>
+        <span class="lang-es">HABILIDADES</span>
+      </div>
+  <div class="skills-content">
+    {skills.map((skill, index) => (
+      <div class={`skill-card ${index === 1 ? 'offset' : ''}`}>
+        <h3 class="skill-name">{skill.name}</h3>
+        <ul class="skill-items">
+          {skill.items.map(item => (
+            <li>
+              <span class="arrow">→</span> {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .skills {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    padding: 4rem 3rem;
+    padding-left: 6rem;
+    max-width: 900px;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-text);
+    text-transform: uppercase;
+  }
+
+  .skills-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .skill-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .skill-card.offset {
+    transform: translateY(3rem);
+  }
+
+  .skill-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .skill-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .skill-items li {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .arrow {
+    color: var(--color-border);
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 768px) {
+    .skills {
+      grid-template-columns: 1fr;
+      padding: 4rem 1.5rem;
+      gap: 1rem;
+    }
+
+    .skills-content {
+      grid-template-columns: 1fr;
+    }
+
+    .skill-card.offset {
+      transform: none;
+    }
+  }
+</style>

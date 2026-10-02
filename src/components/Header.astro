@@ -1,0 +1,116 @@
+---
+---
+
+<header class="header">
+  <a href="/" class="logo">
+    <span class="logo-name">Eric Chavarria.</span>
+    <span class="logo-subtitle">AI-first Developer</span>
+  </a>
+  <div class="header-icons">
+   
+    <input type="checkbox" id="theme-toggle" class="toggle-input">
+    <label for="theme-toggle" class="toggle-label" aria-label="Toggle dark mode">
+      <svg class="toggle-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <svg class="toggle-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </label>
+    <input type="checkbox" id="lang-toggle" class="toggle-input">
+    <label for="lang-toggle" class="toggle-label lang-toggle" aria-label="Toggle language">
+      <span class="lang-icon-en">EN</span>
+      <span class="lang-icon-es">ES</span>
+    </label>
+    <!-- <button class="menu-btn" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button> -->
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    z-index: 100;
+    background: var(--color-bg);
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .logo-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+  }
+
+  .logo-subtitle {
+    font-size: 0.7rem;
+    color: var(--color-muted);
+    letter-spacing: 0.02em;
+  }
+
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .header-icons a,
+  .header-icons .toggle-label,
+  .menu-btn {
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+
+  .header-icons a:hover,
+  .header-icons .toggle-label:hover,
+  .menu-btn:hover {
+    opacity: 1;
+  }
+
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .toggle-label {
+    cursor: pointer;
+    padding: 0;
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      padding: 1rem 1.5rem;
+    }
+  }
+</style>

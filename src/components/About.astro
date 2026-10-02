@@ -1,0 +1,58 @@
+---
+---
+
+<section class="about" id="about">
+      <div class="section-label">
+        <span class="lang-en">ABOUT</span>
+        <span class="lang-es">SOBRE MÍ</span>
+      </div>
+    <div class="about-content">
+      <p>
+        <span class="lang-en">Full Stack Engineer with a focus on rapid execution, systems thinking, and integration of AI tools in the development workflow. Experience building end-to-end solutions, from data design to production user interfaces.</span>
+        <span class="lang-es">Ingeniero Full Stack con enfoque en ejecución rápida, pensamiento sistémico e integración de herramientas de IA en el flujo de desarrollo. Experiencia construyendo soluciones end-to-end, desde diseño de datos hasta interfaces de usuario en producción.</span>
+      </p>
+      <p>
+        <span class="lang-en">Strong orientation to product, performance, and automation.</span>
+        <span class="lang-es">Fuerte orientación a producto, performance y automatización.</span>
+      </p>
+    </div>
+</section>
+
+<style>
+  .about {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    padding: 6rem 3rem;
+    padding-left: 6rem;
+    max-width: 900px;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-text);
+    text-transform: uppercase;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-muted);
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+      padding: 4rem 1.5rem;
+      gap: 1rem;
+    }
+  }
+</style>

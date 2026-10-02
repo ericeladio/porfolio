@@ -1,0 +1,336 @@
+---
+import tarot1 from '../assets/tarot1-800.webp';
+import tarot1lg from '../assets/tarot1-1280.webp';
+import tarot2 from '../assets/tarot2-800.webp';
+import tarot2lg from '../assets/tarot2-1280.webp';
+import tarot3 from '../assets/tarot3-800.webp';
+import tarot3lg from '../assets/tarot3-1280.webp';
+import focus1 from '../assets/focus1-800.webp';
+import focus1lg from '../assets/focus1-1280.webp';
+import focus2 from '../assets/focus2-800.webp';
+import focus2lg from '../assets/focus2-1280.webp';
+import focus3 from '../assets/focus3-800.webp';
+import focus3lg from '../assets/focus3-1280.webp';
+
+const works = [
+  {
+    id: 'tarot',
+    title: { en: 'Cartas Clow', es: 'Cartas Clow' },
+    badge: 'NEW',
+    slides: [
+      { sm: tarot1, lg: tarot1lg },
+      { sm: tarot2, lg: tarot2lg },
+      { sm: tarot3, lg: tarot3lg }
+    ],
+    description: {
+      en: 'Tarot web app anyone can update on their own, no code needed. Bilingual readings and a daily card.',
+      es: 'Web de tarot que cualquiera puede actualizar sin necesidad de programación. Lecturas bilingües y carta del día.'
+    },
+    link: 'https://cardsclow.vercel.app/'
+  },
+  {
+    id: 'focus',
+    title: { en: 'Focus', es: 'Focus' },
+    badge: 'PERSONAL',
+    slides: [
+      { sm: focus1, lg: focus1lg },
+      { sm: focus2, lg: focus2lg },
+      { sm: focus3, lg: focus3lg }
+    ],
+    description: {
+      en: 'The PWA I use every day. Seven goals max, streaks and photos, works offline and syncs across devices.',
+      es: 'La PWA que uso todos los días. Máximo 7 objetivos, rachas y fotos, funciona offline y se sincroniza entre dispositivos.'
+    },
+    link: 'https://myfocusboard.vercel.app/'
+  }
+];
+
+const sizes = '(max-width: 768px) calc(100vw - 48px), 524px';
+---
+
+<section class="works" id="works">
+  <div class="section-label">
+    <span class="lang-en">WORKS</span>
+    <span class="lang-es">PROYECTOS</span>
+  </div>
+  <div class="works-content">
+    {works.map(work => {
+      const total = work.slides.length;
+      const timelines = work.slides.map((_, i) => `--${work.id}-${i + 1}`).join(', ');
+      const name = work.title.es;
+
+      return (
+        <div class="work-item">
+          <div class="carousel" style={`timeline-scope: ${timelines}`}>
+            <div class="track" tabindex="0" role="region" aria-label={`Imágenes de ${name}`}>
+              {work.slides.map((slide, i) => {
+                const prev = ((i - 1 + total) % total) + 1;
+                const next = ((i + 1) % total) + 1;
+                return (
+                  <div
+                    class="slide"
+                    id={`c-${work.id}-${i + 1}`}
+                    style={`view-timeline-name: --${work.id}-${i + 1}; view-timeline-axis: inline`}
+                  >
+                    <img
+                      src={slide.sm.src}
+                      srcset={`${slide.lg.src} 1280w, ${slide.sm.src} 800w`}
+                      sizes={sizes}
+                      width={slide.lg.width}
+                      height={slide.lg.height}
+                      alt={`${name} — captura ${i + 1} de ${total}`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <a class="nav prev" href={`#c-${work.id}-${prev}`} aria-label="Imagen anterior">‹</a>
+                    <a class="nav next" href={`#c-${work.id}-${next}`} aria-label="Imagen siguiente">›</a>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div class="dots">
+              {work.slides.map((_, i) => (
+                <a
+                  class="dot"
+                  href={`#c-${work.id}-${i + 1}`}
+                  aria-label={`Ir a la imagen ${i + 1} de ${total}`}
+                  style={`--dot-tl: --${work.id}-${i + 1}`}
+                >
+                  <span class="dot-mark"></span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div class="work-info">
+            <h3 class="work-title">
+              <span class="lang-en">{work.title.en}</span>
+              <span class="lang-es">{work.title.es}</span>
+              {work.badge && <span class="badge">{work.badge}</span>}
+            </h3>
+            <p class="work-description">
+              <span class="lang-en">{work.description.en}</span>
+              <span class="lang-es">{work.description.es}</span>
+            </p>
+            <a href={work.link} class="work-link" target="_blank" rel="noopener noreferrer">
+              <span class="lang-en">See it live</span>
+              <span class="lang-es">Ver en vivo</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>
+
+<style>
+  .works {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    padding: 4rem 3rem;
+    padding-left: 6rem;
+    max-width: 900px;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-text);
+    text-transform: uppercase;
+  }
+
+  .works-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .work-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    border-radius: 12px;
+  }
+
+  .track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .track:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .slide {
+    position: relative;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    line-height: 1;
+    color: #ffffff;
+    background: rgba(20, 20, 20, 0.45);
+    border-radius: 50%;
+    transition: opacity 0.2s, background 0.2s;
+  }
+
+  .nav:hover {
+    background: rgba(20, 20, 20, 0.7);
+  }
+
+  .nav:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+  }
+
+  .prev {
+    left: 12px;
+  }
+
+  .next {
+    right: 12px;
+  }
+
+  .dots {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    padding-top: 0.15rem;
+  }
+
+  .dot {
+    padding: 0.4rem 0.1rem;
+    display: flex;
+  }
+
+  .dot:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+    border-radius: 4px;
+  }
+
+  .dot-mark {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-muted);
+    opacity: 0.35;
+  }
+
+  @supports (animation-timeline: view()) {
+    .dot-mark {
+      animation: dot-on linear both;
+      animation-timeline: var(--dot-tl);
+    }
+  }
+
+  @keyframes dot-on {
+    0% {
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.35;
+    }
+  }
+
+  .work-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .work-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .badge {
+    font-size: 0.6rem;
+    font-weight: 700;
+    background: #ff4444;
+    color: white;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .work-description {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    line-height: 1.5;
+  }
+
+  .work-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.3rem;
+    transition: opacity 0.2s;
+  }
+
+  .work-link:hover {
+    opacity: 0.7;
+  }
+
+  .arrow {
+    transition: transform 0.2s;
+  }
+
+  .work-link:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 768px) {
+    .works {
+      grid-template-columns: 1fr;
+      padding: 4rem 1.5rem;
+      gap: 1rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .track {
+      scroll-behavior: auto;
+    }
+  }
+</style>

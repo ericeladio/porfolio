@@ -1,0 +1,131 @@
+---
+const sparkRoutes = {
+  a: 'M-20 200 H300 L420 320 H760 L880 440 H1460',
+  b: 'M1460 700 H1120 L1000 580 H620 L500 700 H-20'
+};
+---
+
+<div class="circuit" aria-hidden="true">
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+    <g class="traces">
+      <path d="M-20 520 H220 L340 400 H700 L820 520 H1460" />
+      <path d="M-20 820 H560 L680 700 H1040 L1160 820 H1460" />
+      <path d={sparkRoutes.a} />
+      <path d={sparkRoutes.b} />
+      <path d="M240 -20 V140 L360 260 V620 L480 740 V920" />
+      <path d="M1240 -20 V200 L1120 320 V560 L1000 680 V920" />
+      <path d="M40 60 H160 M60 120 H160 M1280 780 H1400 M1280 840 H1400" />
+    </g>
+
+    <g class="nodes">
+      <circle cx="300" cy="200" r="3" />
+      <circle cx="420" cy="320" r="3" />
+      <circle cx="760" cy="320" r="3" />
+      <circle cx="880" cy="440" r="3" />
+      <circle cx="1120" cy="700" r="3" />
+      <circle cx="1000" cy="580" r="3" />
+      <circle cx="620" cy="580" r="3" />
+      <circle cx="500" cy="700" r="3" />
+      <circle cx="220" cy="520" r="2.5" />
+      <circle cx="340" cy="400" r="2.5" />
+      <circle cx="700" cy="400" r="2.5" />
+      <circle cx="820" cy="520" r="2.5" />
+      <circle cx="560" cy="820" r="2.5" />
+      <circle cx="680" cy="700" r="2.5" />
+      <circle cx="1040" cy="700" r="2.5" />
+      <circle cx="1160" cy="820" r="2.5" />
+      <circle cx="360" cy="260" r="3" />
+      <circle cx="360" cy="620" r="3" />
+      <circle cx="1120" cy="320" r="3" />
+      <circle cx="1120" cy="560" r="3" />
+    </g>
+
+    <g class="spark">
+      <g class="spark-halo">
+        <path class="spark-path spark-a" d={sparkRoutes.a} />
+        <path class="spark-path spark-b" d={sparkRoutes.b} />
+      </g>
+      <g class="spark-core">
+        <path class="spark-path spark-a" d={sparkRoutes.a} />
+        <path class="spark-path spark-b" d={sparkRoutes.b} />
+      </g>
+    </g>
+  </svg>
+</div>
+
+<style>
+  .circuit {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translateZ(0);
+  }
+
+  .circuit svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .traces {
+    fill: none;
+    stroke: var(--color-text);
+    stroke-width: 1;
+    opacity: 0.05;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .nodes {
+    fill: var(--color-text);
+    stroke: none;
+    opacity: 0.07;
+  }
+
+  /* Ambas rutas miden exactamente 1579.411 unidades de usuario.
+     El periodo del guionado (130 + 1449.411) iguala la longitud de la ruta,
+     así que la luz recorre el trazo completo y el loop es continuo. */
+  .spark-path {
+    fill: none;
+    stroke: var(--circuit-spark);
+    stroke-linecap: round;
+    stroke-dasharray: 130 1449.411;
+    vector-effect: non-scaling-stroke;
+    animation: spark-flow var(--spark-dur) linear infinite var(--spark-delay);
+  }
+
+  .spark-halo .spark-path {
+    stroke-width: 7;
+    opacity: 0.25;
+  }
+
+  .spark-core .spark-path {
+    stroke-width: 1.5;
+    opacity: 1;
+  }
+
+  .spark-a {
+    --spark-dur: 18s;
+    --spark-delay: -3s;
+  }
+
+  .spark-b {
+    --spark-dur: 26s;
+    --spark-delay: -14s;
+  }
+
+  @keyframes spark-flow {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: -1579.411;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spark {
+      display: none;
+    }
+  }
+</style>

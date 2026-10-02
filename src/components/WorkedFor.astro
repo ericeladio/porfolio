@@ -1,0 +1,113 @@
+---
+const companies = [
+  {
+    name: 'Kondosoft',
+    role: 'Full Stack Developer',
+    period: '2025 - Actualidad'
+  },
+  {
+    name: 'SEGALMEX',
+    role: 'Python Developer',
+    period: 'Feb 2023 - Oct 2023'
+  },
+  {
+    name: 'LISA Insurtech',
+    role: 'Python Developer',
+    period: 'Jun 2022 - Dec 2022'
+  },
+  {
+    name: 'Graviti',
+    role: 'Full Stack Developer',
+    period: 'Feb 2022 - Jun 2022'
+  },
+  {
+    name: 'Kondosoft',
+    role: 'Frontend Developer',
+    period: 'Dec 2020 - Jan 2022'
+  }
+];
+---
+
+<section class="worked-for" id="worked-for">
+  <div class="section-label">
+    <span class="lang-en">I'VE WORKED FOR</span>
+    <span class="lang-es">HE TRABAJADO EN</span>
+  </div>
+  <div class="worked-for-content">
+    {companies.map(company => (
+      <div class="company-item">
+        <h3 class="company-name">{company.name}</h3>
+        <p class="company-role">{company.role} – {company.period}</p>
+      </div>
+    ))}
+    <!-- <a href="#" class="see-all">
+      <span class="lang-en">See all companies</span>
+      <span class="lang-es">Ver todas las empresas</span>
+    </a> -->
+  </div>
+</section>
+
+<style>
+  .worked-for {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    padding: 4rem 3rem;
+    padding-left: 6rem;
+    max-width: 900px;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-text);
+    text-transform: uppercase;
+  }
+
+  .worked-for-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .company-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .company-role {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
+
+  .see-all {
+    font-size: 0.85rem;
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: opacity 0.2s;
+    margin-top: 0.5rem;
+  }
+
+  .see-all:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .worked-for {
+      grid-template-columns: 1fr;
+      padding: 4rem 1.5rem;
+      gap: 1rem;
+    }
+  }
+</style>

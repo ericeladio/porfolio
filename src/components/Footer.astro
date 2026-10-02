@@ -1,0 +1,60 @@
+---
+---
+
+<footer class="footer">
+  <p class="copyright">
+    <span class="lang-en">Eric Chavarría © 2026. All Rights Reserved.</span>
+    <span class="lang-es">Eric Chavarría © 2026. Todos los Derechos Reservados.</span>
+  </p>
+  <a href="#" class="back-to-top">
+    <span class="arrow">↑</span>
+    <span class="lang-en">Back to top</span>
+    <span class="lang-es">Volver arriba</span>
+  </a>
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    padding-left: 6rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+  }
+
+  .back-to-top {
+    font-size: 0.75rem;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: opacity 0.2s;
+  }
+
+  .back-to-top:hover {
+    opacity: 0.7;
+  }
+
+  .arrow {
+    transition: transform 0.2s;
+  }
+
+  .back-to-top:hover .arrow {
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
