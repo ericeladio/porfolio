@@ -11,12 +11,32 @@ import focus2 from '../assets/focus2-800.webp';
 import focus2lg from '../assets/focus2-1280.webp';
 import focus3 from '../assets/focus3-800.webp';
 import focus3lg from '../assets/focus3-1280.webp';
+import languageboy1 from '../assets/languageboy1-800.webp';
+import languageboy1lg from '../assets/languageboy1-1280.webp';
+import languageboy2 from '../assets/languageboy2-800.webp';
+import languageboy2lg from '../assets/languageboy2-1280.webp';
+import languageboy3 from '../assets/languageboy3-800.webp';
+import languageboy3lg from '../assets/languageboy3-1280.webp';
 
 const works = [
   {
+    id: 'languageboy',
+    title: { en: 'LanguageBoy', es: 'LanguageBoy' },
+    badge: 'NEW',
+    slides: [
+      { sm: languageboy1, lg: languageboy1lg },
+      { sm: languageboy2, lg: languageboy2lg },
+      { sm: languageboy3, lg: languageboy3lg }
+    ],
+    description: {
+      en: 'GBA and DS emulator that uses AI right in the browser to extract and translate in-game text. Save words and export them to Anki decks with audio, semi-automatically.',
+      es: 'Emulador de GBA y DS que usa inteligencia artificial directamente en el navegador para extraer y traducir el texto del juego. Guarda tus palabras y expórtalas a mazos de Anki con audio de forma semiautomática.'
+    },
+    link: 'https://languageboy.vercel.app/'
+  },
+  {
     id: 'tarot',
     title: { en: 'Cartas Clow', es: 'Cartas Clow' },
-    badge: 'NEW',
     slides: [
       { sm: tarot1, lg: tarot1lg },
       { sm: tarot2, lg: tarot2lg },
